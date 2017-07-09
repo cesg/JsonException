@@ -1,4 +1,4 @@
-Laravel Json Exception formater.
+Laravel Json Exception formatter.
 
 Example.
 ```php
