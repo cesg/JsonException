@@ -9,7 +9,7 @@ abstract class JsonExceptionAbstract
     protected $description;
     protected $fields;
 
-    public function getArray()
+    public function getBodyResponse()
     {
         $data = [
             'data' => [
@@ -21,5 +21,10 @@ abstract class JsonExceptionAbstract
             $data['data']['fields'] = $this->fields;
         }
         return $data;
+    }
+
+    public function getStatus()
+    {
+        return $this->status;
     }
 }
