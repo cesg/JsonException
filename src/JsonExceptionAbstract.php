@@ -12,13 +12,13 @@ abstract class JsonExceptionAbstract
     public function getBodyResponse()
     {
         $data = [
-            'data' => [
+            'error' => [
                 'status' => $this->status,
                 'description' => $this->description
             ]
         ];
         if ($this->fields) {
-            $data['data']['fields'] = $this->fields;
+            $data['error']['fields'] = $this->fields;
         }
         return $data;
     }
