@@ -1,7 +1,6 @@
 <?php
 namespace Cesg\JsonException;
 
-
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
 
@@ -12,6 +11,7 @@ class JsonExceptionFactory
         if (is_a($exception, ValidationException::class)) {
             return new ValidationException($exception->validator);
         }
+        
         if (is_a($exception, ModelNotFoundException::class)) {
             return new NotFoundException();
         }

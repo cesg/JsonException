@@ -2,7 +2,6 @@
 
 namespace Cesg\JsonException;
 
-
 class JsonException extends JsonExceptionAbstract
 {
     protected $exception;
@@ -16,6 +15,6 @@ class JsonException extends JsonExceptionAbstract
         $this->exception = $exception;
         $this->status = 500;
         $this->description = $this->exception->getMessage();
+        $this->code = 'API_INTERNAL_ERROR';
     }
-
 }

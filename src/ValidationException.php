@@ -2,7 +2,6 @@
 
 namespace Cesg\JsonException;
 
-
 use Illuminate\Validation\Validator;
 
 class ValidationException extends JsonExceptionAbstract
@@ -18,6 +17,7 @@ class ValidationException extends JsonExceptionAbstract
         $this->status = 422;
         $this->description = 'Los campos presentan errores.';
         $this->validator = $validator;
+        $this->code = 'API_VALIDATION_ERROR';
         $this->fillErrrosFields();
     }
 

@@ -2,7 +2,6 @@
 
 namespace Cesg\JsonException;
 
-
 class NotFoundException extends JsonExceptionAbstract
 {
 
@@ -13,5 +12,6 @@ class NotFoundException extends JsonExceptionAbstract
     {
         $this->status = 404;
         $this->description = 'No es es posible encontrar el recurso.';
+        $this->code = 'API_NOT_FOUND_ERROR';
     }
 }
