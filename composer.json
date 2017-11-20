@@ -4,10 +4,10 @@
     "type": "library",
     "require": {
         "php" : "^5.6|^7.0",
-        "illuminate/contracts": "^5.5",
-        "illuminate/support": "^5.5",
-        "illuminate/validation": "^5.5",
-        "illuminate/database": "^5.5"
+        "illuminate/contracts": "^5.3",
+        "illuminate/support": "^5.3",
+        "illuminate/validation": "^5.3",
+        "illuminate/database": "^5.3"
     },
     "license": "MIT",
     "authors": [
