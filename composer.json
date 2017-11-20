@@ -4,8 +4,10 @@
     "type": "library",
     "require": {
         "php" : "^5.6|^7.0",
-        "illuminate/contracts": "~5.3.0|~5.4.0|~5.5.0",
-        "illuminate/support": "~5.3.0|~5.4.0|~5.5.0"
+        "illuminate/contracts": "^5.5",
+        "illuminate/support": "^5.5",
+        "illuminate/validation": "^5.5",
+        "illuminate/database": "^5.5"
     },
     "license": "MIT",
     "authors": [
@@ -14,7 +16,6 @@
             "email": "cesgbla@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Cesg\\JsonException\\": "src/"

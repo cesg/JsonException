@@ -1,7 +1,8 @@
 <?php
 
-namespace Cesg\JsonException;
+namespace Cesg\JsonException\Transformer;
 
+use Cesg\JsonException\JsonExceptionAbstract;
 use Illuminate\Validation\Validator;
 
 class ValidationException extends JsonExceptionAbstract

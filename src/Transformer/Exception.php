@@ -1,8 +1,10 @@
 <?php
 
-namespace Cesg\JsonException;
+namespace Cesg\JsonException\Transformer;
 
-class JsonException extends JsonExceptionAbstract
+use Cesg\JsonException\JsonExceptionAbstract;
+
+class Exception extends JsonExceptionAbstract
 {
     protected $exception;
 

@@ -1,9 +1,11 @@
 <?php
 namespace Cesg\JsonException;
 
+use Cesg\JsonException\Transformer\Exception;
+use Cesg\JsonException\Transformer\ResourceNotFoundException;
+use Cesg\JsonException\Transformer\RouteNotFoundException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
-use Cesg\JsonException\JsonException;
 
 class JsonExceptionFactory
 {
@@ -14,13 +16,13 @@ class JsonExceptionFactory
         }
         
         if (is_a($exception, ModelNotFoundException::class)) {
-            return new NotFoundException();
+            return new ResourceNotFoundException();
         }
 
         if (is_a($exception, 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException')) {
-            return new JsonException($exception);
+            return new RouteNotFoundException();
         }
 
-        return new JsonException($exception);
+        return new Exception($exception);
     }
 }
