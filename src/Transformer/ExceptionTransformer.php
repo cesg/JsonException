@@ -4,7 +4,7 @@ namespace Cesg\JsonException\Transformer;
 
 use Cesg\JsonException\JsonExceptionAbstract;
 
-class Exception extends JsonExceptionAbstract
+class ExceptionTransformer extends JsonExceptionAbstract
 {
     protected $exception;
 
