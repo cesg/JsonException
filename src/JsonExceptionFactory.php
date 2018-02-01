@@ -2,12 +2,14 @@
 
 namespace Cesg\JsonException;
 
+use Cesg\JsonException\Transformer\AuthenticationExceptionTransformer;
 use Cesg\JsonException\Transformer\ExceptionTransformer;
 use Cesg\JsonException\Transformer\ResourceNotFoundExceptionTransformer;
 use Cesg\JsonException\Transformer\RouteNotFoundExceptionTransformer;
 use Cesg\JsonException\Transformer\ValidationExceptionTransformer;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Auth\AuthenticationException;
 
 class JsonExceptionFactory
 {
@@ -30,6 +32,7 @@ class JsonExceptionFactory
     protected function getHandlers()
     {
         return array_merge([
+            AuthenticationException::class => AuthenticationExceptionTransformer::class,
             ValidationException::class => ValidationExceptionTransformer::class,
             ModelNotFoundException::class => ResourceNotFoundExceptionTransformer::class,
             'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' => RouteNotFoundExceptionTransformer::class,
