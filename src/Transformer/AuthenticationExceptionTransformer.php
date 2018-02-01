@@ -15,7 +15,7 @@ class AuthenticationExceptionTransformer extends JsonExceptionAbstract
      */
     public function __construct(AuthenticationException $exception)
     {
-        $this->status = $exception->getCode();
+        $this->status = 401;
         $this->description = $exception->getMessage();
         $this->code = 'API_AUTHENTICATION_ERROR';
     }
