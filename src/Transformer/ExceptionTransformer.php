@@ -11,7 +11,7 @@ class ExceptionTransformer extends JsonExceptionAbstract
     public function __construct(\Exception $exception)
     {
         $this->exception = $exception;
-        $this->status = $exception->getCode();
+        $this->status = 500;
         $this->description = $this->exception->getMessage();
         $this->code = 'API_INTERNAL_ERROR';
     }
