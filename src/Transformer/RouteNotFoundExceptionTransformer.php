@@ -4,7 +4,7 @@ namespace Cesg\JsonException\Transformer;
 
 use Cesg\JsonException\JsonExceptionAbstract;
 
-class RouteNotFoundException extends JsonExceptionAbstract
+class RouteNotFoundExceptionTransformer extends JsonExceptionAbstract
 {
     public function __construct()
     {
