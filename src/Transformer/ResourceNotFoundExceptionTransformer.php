@@ -6,10 +6,6 @@ use Cesg\JsonException\JsonExceptionAbstract;
 
 class ResourceNotFoundException extends JsonExceptionAbstract
 {
-
-    /**
-     * NoEncontradoError constructor.
-     */
     public function __construct()
     {
         $this->status = 404;

@@ -8,10 +8,6 @@ class Exception extends JsonExceptionAbstract
 {
     protected $exception;
 
-    /**
-     * JsonException constructor.
-     * @param $exception
-     */
     public function __construct(\Exception $exception)
     {
         $this->exception = $exception;
