@@ -21,13 +21,13 @@ class ValidationExceptionTransformer extends JsonExceptionAbstract
 
     protected function fillErrrosFields()
     {
-        foreach ($this->validator->errors()->getMessages() as $field => $descripcion) {
-            $this->addError([$field => $descripcion[0]]);
+        foreach ($this->validator->errors()->getMessages() as $field => $errors) {
+            $this->addError($field, $errors);
         }
     }
 
-    public function addError(array $error)
+    public function addError($field, array $errors)
     {
-        $this->fields[] = $error;
+        $this->fields[$field] = $errors;
     }
 }
